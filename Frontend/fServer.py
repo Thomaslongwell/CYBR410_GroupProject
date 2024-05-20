@@ -8,7 +8,7 @@ import requests
 
 app = Flask(__name__)
 
-logging.basicConfig(level=logging.DEBUG)  # Set the log level to DEBUG
+#logging.basicConfig(level=logging.DEBUG)  # Set the log level to DEBUG
 
 
 

@@ -1,0 +1,15 @@
+Weather/Address API
+
+This program adds two API calls to the web API server - one to check the address of a given host and one to check the weather of a given host - both using code from lab 2. 
+
+The first api call is http://-server-/address/-your host name|ip-
+
+The second api call is http://-server-/weather/-your host name|ip-
+
+e.g. http://127.0.0.1:5000/weather/amazon.com  or http://127.0.0.1:5000/address/8.8.8.8
+
+Each new call will be cached for a faster return on repeated calls
+
+To build a docker image use the command `dockebuild -t weather_service_ubuntu`
+
+To run the image use the command `docker run -it -p 9001:9001 weather_service_ubuntu`
