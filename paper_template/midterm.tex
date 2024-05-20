@@ -23,11 +23,26 @@
 
 %for single author (just remove % characters)
 \author{
-{\rm Your N.\ Here}\\
-Your Institution
+{\rm Nicholas Burlakov}\\
+Eastern Washington University
 \and
 {\rm Second Name}\\
-Second Institution
+Eastern Washington University
+\and
+{\rm Your N.\ Here}\\
+Eastern Washington University
+\and
+{\rm Second Name}\\
+Eastern Washington University
+\and
+{\rm Your N.\ Here}\\
+Eastern Washington University
+\and
+{\rm Second Name}\\
+Eastern Washington University
+\and
+{\rm Second Name}\\
+Eastern Washington University
 % copy the following lines to add more authors
 % \and
 % {\rm Name}\\
@@ -39,8 +54,7 @@ Second Institution
 %-------------------------------------------------------------------------------
 \begin{abstract}
 %-------------------------------------------------------------------------------
-Your abstract text goes here. Just a few facts. Whet our appetites.
-Not more than 200 words, if possible, and preferably closer to 150.
+The project entails deploying a robust web service securely and efficiently using Kubernetes (K8s) orchestration. This involves hosting Apache/Nginx servers housing an IP-to-Physical Address service and a weather service. Incorporating a multi-layered defense strategy, including honeypot mechanisms, and utilizing Sysdig for comprehensive logging ensures heightened security and real-time monitoring. Leveraging Kubernetes' scalability and resilience optimizes resource utilization and bolsters fault tolerance, facilitating seamless access and utilization of the critical web service with enhanced efficiency and reliability.
 \end{abstract}
 
 
@@ -50,14 +64,26 @@ Not more than 200 words, if possible, and preferably closer to 150.
 \input{intro}
 
 %-------------------------------------------------------------------------------
-\section{Footnotes, Verbatim, and Citations}
+\section{Orchestration}
 %-------------------------------------------------------------------------------
-\input{background}
+\input{orchestration}
 
 %-------------------------------------------------------------------------------
-\section{Floating Figures and Lists}
+\section{Front end}
 
-\input{eval}
+\input{front_end}
+%-------------------------------------------------------------------------------
+\section{Services}
+
+\input{services}
+%-------------------------------------------------------------------------------
+\section{Logging}
+
+\input{logging}
+%-------------------------------------------------------------------------------
+\section{Defense}
+
+\input{defense}
 %-------------------------------------------------------------------------------
 \bibliographystyle{plain}
 \bibliography{refs}
