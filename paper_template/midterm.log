@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.2)  20 MAY 2024 10:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.2)  21 MAY 2024 11:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -719,18 +719,6 @@ LaTeX Warning: Label `fig:vectors' multiply defined.
 
 LaTeX Warning: Label `sec:figs' multiply defined.
 
-
-LaTeX Warning: Label `fig:vectors' multiply defined.
-
-
-LaTeX Warning: Label `sec:figs' multiply defined.
-
-
-LaTeX Warning: Label `fig:vectors' multiply defined.
-
-
-LaTeX Warning: Label `sec:figs' multiply defined.
-
 )
 \openout1 = `midterm.aux'.
 
@@ -860,12 +848,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-) (./front_end.tex [1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap
-/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}
+) (./front_end.tex) (./services.tex [1{/usr/local/texlive/2024/texmf-var/fonts/
+map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvip
+s/base/8r.enc}
 
 
-]) (./services.tex) (./logging.tex [2])
-(./defense.tex) (./midterm.bbl
+]) (./logging.tex)
+(./defense.tex [2]) (./midterm.bbl
 Underfull \hbox (badness 4518) in paragraph at lines 10--16
 []\T1/ptm/m/n/10 (+20) Carl A. Wald-spurger.  Mem-ory re-source man-
  []
@@ -892,7 +881,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--16
 [][]$\T1/pcr/m/n/10 https : / / www . usenix . org / legacy / event / osdi02 /
  []
 
-) [3] (./midterm.aux)
+) [3
+
+] (./midterm.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -905,11 +896,11 @@ Package rerunfilecheck Info: File `midterm.out' has not changed.
 (rerunfilecheck)             Checksum: F4558C5EDDF11DABC60C8010C4DD66D2;541.
  ) 
 Here is how much of TeX's memory you used:
- 22726 strings out of 474116
- 420973 string characters out of 5743683
- 1952187 words of memory out of 5000000
+ 22751 strings out of 474116
+ 421197 string characters out of 5743683
+ 1950187 words of memory out of 5000000
  44483 multiletter control sequences out of 15000+600000
- 618014 words of font info for 213 fonts, out of 8000000 for 9000
+ 619184 words of font info for 231 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,10n,107p,1004b,750s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
@@ -917,10 +908,10 @@ Here is how much of TeX's memory you used:
 ocal/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texli
 ve/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/te
 xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on midterm.pdf (3 pages, 80489 bytes).
+Output written on midterm.pdf (3 pages, 79787 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
- 18 named destinations out of 1000 (max. 500000)
+ 98 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
+ 16 named destinations out of 1000 (max. 500000)
  80445 words of extra memory for PDF output out of 89155 (max. 10000000)
 
