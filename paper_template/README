@@ -1,0 +1,31 @@
+Just fyi - for the code snippets to work I added the listings package above the \begin{document} section: (copying the whole thing for ease of use)
+
+
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{usenix-2020-09}
+
+% to be able to draw some self-contained figs
+\usepackage{tikz}
+\usepackage{amsmath}
+
+% inlined bib file
+\usepackage{filecontents}
+
+% to include png figures
+\usepackage{graphicx}
+
+% Include the listings package and define code style
+\usepackage{listings}
+\lstdefinestyle{mystyle}{
+    language=Python,
+    basicstyle=\ttfamily,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green},
+    stringstyle=\color{red},
+    breaklines=true,
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny,
+    frame=single
+}
+
