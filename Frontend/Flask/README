@@ -10,6 +10,6 @@ e.g. http://127.0.0.1:5000/weather/amazon.com  or http://127.0.0.1:5000/address/
 
 Each new call will be cached for a faster return on repeated calls
 
-To build a docker image use the command `dockebuild -t weather_service_ubuntu`
+To build a docker image use the command `docker build -t flasky .`
 
-To run the image use the command `docker run -it -p 9001:9001 weather_service_ubuntu`
+To run the image use the command `docker run -it -p 9001:9001 flasky`

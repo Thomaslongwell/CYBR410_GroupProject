@@ -1,0 +1,17 @@
+ok heres the rub:
+we will build an image named "flasky" that copies front end files, exposes port 9001, and builds a flask server hosting our services.
+
+in /CYBR410_GroupProject/Frontend/Flask/ run the command
+docker build -t flasky .
+
+we will build a second image named "fningx" that deploys an nginx webserver on 8080, as well as configures the server to redirect to our flask deployment. 
+
+in /CYBR410_GroupProject/Frontend/nginx/ run the command  
+docker build -t fnginx .
+
+we then run our docker compose file to put the two together.
+
+in /CYBR410_GroupProject/Frontend/ run the command
+sudo docker compose up
+
+navigate to "localhost:8080". Viola, magnefique, chefs kiss... we did it.

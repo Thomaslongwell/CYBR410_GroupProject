@@ -1,0 +1,4 @@
+#README
+This dockerfile pulls an nginx image, then copies config files 
+that proxy our webserver to a specific address. In our case 
+this would be the address of the flask server. 
