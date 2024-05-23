@@ -1,0 +1,7 @@
+<<<<<<< HEAD
+This is the services section (Spencer)
+=======
+The first service implemented in the project is a weather API designed to provide accurate and detailed weather forecasts by leveraging various web technologies and APIs. Built on a Flask server, this service efficiently handles user requests to deliver timely weather information. Users input a URL, which our system processes to retrieve the corresponding IP address. This IP address is then used to fetch the geographical location through a WHOIS lookup and the U.S. Census Bureau's geocoding service. By converting the address into latitude and longitude coordinates, we can accurately pinpoint the user's location.
+
+Once the geographical coordinates are obtained, the service makes an API call to the National Weather Service (NWS) at weather.gov. The NWS API provides detailed weather forecasts based on the coordinates received. To optimize performance and reduce redundant API calls, the service implements caching mechanisms. This caching stores previously fetched weather data, ensuring that repeat requests for the same location are served quickly and efficiently. The integration of these components within the Flask framework not only streamlines the process but also ensures scalability and reliability, making our weather API service a robust tool for users seeking accurate weather information.
+>>>>>>> c373d122dbb882a8121d00e642e07ea5aeb22987

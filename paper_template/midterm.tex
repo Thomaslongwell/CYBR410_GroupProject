@@ -9,6 +9,23 @@
 % inlined bib file
 \usepackage{filecontents}
 
+% to include png figures
+\usepackage{graphicx}
+
+% Include the listings package and define code style
+\usepackage{listings}
+\lstdefinestyle{mystyle}{
+    language=Python,
+    basicstyle=\ttfamily,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green},
+    stringstyle=\color{red},
+    breaklines=true,
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny,
+    frame=single
+}
 
 %-------------------------------------------------------------------------------
 \begin{document}
@@ -26,7 +43,7 @@
 {\rm Nicholas Burlakov}\\
 Eastern Washington University
 \and
-{\rm Second Name}\\
+{\rm Spencer West}\\
 Eastern Washington University
 \and
 {\rm Your N.\ Here}\\
@@ -35,7 +52,7 @@ Eastern Washington University
 {\rm Second Name}\\
 Eastern Washington University
 \and
-{\rm Your N.\ Here}\\
+{\rm Paul Aguilar}\\
 Eastern Washington University
 \and
 {\rm Second Name}\\
@@ -71,7 +88,7 @@ The project entails deploying a robust web service securely and efficiently usin
 %-------------------------------------------------------------------------------
 \section{Front end}
 
-\input{front_end}
+\input{frontend}
 %-------------------------------------------------------------------------------
 \section{Services}
 
