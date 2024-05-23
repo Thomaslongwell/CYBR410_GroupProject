@@ -1,1 +1,15 @@
-This is the orchestration section (Eric)
+The orchestration for this deployment concerns itself with two key areas. The first area, services, 
+have been designed utilizing docker containers and docker compose for simple build up and tear down. 
+Our docker compose solution utilizes two docker images, one running NGINX as a reverse proxy, 
+and the other running a flask server locally which serves as an endpoint for the NGINX server. 
+
+The second area, defense, utilizes OpenCanary and IPTables. While OpenCanary is also a docker container, the 
+complexity in building it warrants its own separate orchestration. To accomplish this, we utilize 
+some basic bash scripting to automate the necessary commands to run OpenCanary with the configuration and 
+services required. We also include IPTables commands part of this bash script. These rules filter ports and 
+drop traffic that attempts to enumerate OpenCanary and its ports. 
+
+By automating most of the more complex tasks, our services and defenses can be deployed quickly 
+and by a greater number of individuals, even those not intimately familiar with its inner workings. 
+The use of docker containers and docker compose also allow our deployment to be mobile, only requiring 
+prospective users to install a small number of programs (i.e., docker, docker compose, git). 
