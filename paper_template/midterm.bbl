@@ -1,3 +1,13 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{grinberg2018flask}
+Miguel Grinberg.
+\newblock {\em Flask web development}.
+\newblock " O'Reilly Media, Inc.", 2018.
+
+\bibitem{weather2009national}
+Past Weather.
+\newblock National weather service.
+\newblock {\em URL: https://www. weather. gov}, 2009.
 
 \end{thebibliography}

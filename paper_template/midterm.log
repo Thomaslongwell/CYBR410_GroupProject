@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.2)  23 MAY 2024 13:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.2)  23 MAY 2024 13:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -872,7 +872,7 @@ local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
 ]
-<sequenceD.png, id=46, 604.80956pt x 515.37544pt>
+<sequenceD.png, id=48, 604.80956pt x 515.37544pt>
 File: sequenceD.png Graphic file (type png)
 <use sequenceD.png>
 Package pdftex.def Info: sequenceD.png  used on input line 42.
@@ -884,8 +884,10 @@ Overfull \hbox (11.9246pt too wide) in paragraph at lines 42--43
 
 ) (./services.tex [2 <./sequenceD.png>]) (./logging.tex) (./defense.tex)
 (./midterm.bbl
-
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
+Underfull \hbox (badness 1960) in paragraph at lines 9--12
+[]\T1/ptm/m/n/10 (+20) Past Weather.  Na-tional weather ser-vice.  \T1/ptm/m/it
+/10 (+20) URL:
+ []
 
 ) [3] (./midterm.aux)
  ***********
@@ -900,21 +902,21 @@ Package rerunfilecheck Info: File `midterm.out' has not changed.
 (rerunfilecheck)             Checksum: F4558C5EDDF11DABC60C8010C4DD66D2;541.
  ) 
 Here is how much of TeX's memory you used:
- 24410 strings out of 474116
- 442074 string characters out of 5743683
+ 24428 strings out of 474116
+ 442329 string characters out of 5743683
  2136187 words of memory out of 5000000
- 46137 multiletter control sequences out of 15000+600000
- 591302 words of font info for 163 fonts, out of 8000000 for 9000
+ 46143 multiletter control sequences out of 15000+600000
+ 594716 words of font info for 170 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,9n,107p,1004b,2244s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/
 local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texl
 ive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/t
 exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on midterm.pdf (3 pages, 93579 bytes).
+Output written on midterm.pdf (3 pages, 97182 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 131 compressed objects within 2 object streams
- 71 named destinations out of 1000 (max. 500000)
- 41026 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 154 PDF objects out of 1000 (max. 8388607)
+ 137 compressed objects within 2 object streams
+ 73 named destinations out of 1000 (max. 500000)
+ 45122 words of extra memory for PDF output out of 51595 (max. 10000000)
 
