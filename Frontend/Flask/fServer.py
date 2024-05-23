@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 
+import logging
 import sys
 import subprocess
 import socket
@@ -8,7 +9,7 @@ import requests
 
 app = Flask(__name__)
 
-#logging.basicConfig(level=logging.DEBUG)  # Set the log level to DEBUG
+logging.basicConfig(level=logging.DEBUG)  # Set the log level to DEBUG
 
 
 
@@ -35,8 +36,13 @@ def getIP(incoming):
 
 #getAddress helper method
 def getAddress(incoming):
-  
+    #print(incoming)
     ipAddress= getIP(incoming)
+    #print(ipAddress)
+    #street = ""  # Initialize with default value
+    #city = ""    # Initialize with default value
+    #state = ""   # Initialize with default value
+    #zipC = ""    # Initialize with default value
 
     #print(urlRequest)
     command="whois "
@@ -51,7 +57,13 @@ def getAddress(incoming):
             state=x[10:].strip()
         if x.startswith("Postal"):
             zipC=x[11:].strip()
+    #print(city)
+    #print(state)
+    #print(zipC)
+    #print(street)
     address=[street, city, state, zipC];
+
+
 
     return (address)
 def getWeather(incoming):
@@ -123,7 +135,7 @@ def index():
 @app.route('/address')
 def address():
     return render_template('address_search.html')
-'''
+    '''
 @app.route("/address/<incomingHost>")
 def hostAddress(incomingHost):
 
@@ -160,7 +172,6 @@ def hostAddress():
 
 
     return render_template('address_output.html', url=incomingHost, address=address)
-
 @app.route('/weather', methods=['GET'])
 def weather():
     return render_template('weather_search.html')
@@ -178,6 +189,7 @@ def hostWeather(incomingHost):
 
         addCache(cacheW,incomingHost,weather)
         return(weather)
+
 
 @app.route("/weather", methods=['GET', 'POST'])
 def hostWeather():
