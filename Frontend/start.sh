@@ -1,5 +1,9 @@
-echo "We're so up rn"
+docker-compose up
+
+cd ~/CYBR410_GroupProject/opencanary
+
+docker build -t opencanary -f Dockerfile.latest .
 
 bash iptable.sh
 
-docker-compose up
+echo "We're so up rn"
