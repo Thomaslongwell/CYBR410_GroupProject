@@ -22,8 +22,6 @@ apt install sysdig
 
 apt install tshark
 
-docker compose up
-
 cd $PWD/opencanary
 
 docker build -t opencanary -f Dockerfile.latest .
