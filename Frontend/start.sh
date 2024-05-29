@@ -22,7 +22,7 @@ apt install sysdig
 
 apt install tshark
 
-docker-compose up
+docker compose up
 
 cd $PWD/opencanary
 
