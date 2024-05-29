@@ -24,6 +24,8 @@ apt install sysdig
 
 apt install tshark
 
+git clone https://github.com/Thomaslongwell/CYBR410_GroupProject.git
+
 docker-compose up
 
 cd $PWD/opencanary
