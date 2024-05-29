@@ -18,13 +18,10 @@ apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docke
 
 apt install docker-compose
 
-apt install git
-
 apt install sysdig
 
 apt install tshark
 
-git clone https://github.com/Thomaslongwell/CYBR410_GroupProject.git
 
 docker-compose up
 
