@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{rfc3912}
+Leslie Daigle.
+\newblock {WHOIS Protocol Specification}.
+\newblock RFC 3912, September 2004.
+
 \bibitem{grinberg2018flask}
 Miguel Grinberg.
 \newblock {\em Flask web development}.
