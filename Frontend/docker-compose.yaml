@@ -1,16 +1,14 @@
 version: '2'
 
 services:
-  flasky:
-    container_name: flasky
-    build: ./Flask
+  flask:
+    image: flasky
     ports:
       - "9001:9001"  # Port Flask is running on
     restart: always
 
-  fnginx:
-    container_name: fnginx
-    build: ./nginx
+  reverseproxy:
+    image: fnginx
     ports:
       - 8080:8080 # Port NGINX is listening on 
 
