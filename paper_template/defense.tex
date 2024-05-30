@@ -4,7 +4,4 @@ The honeypot we chose for this project is opencanary. Opencanary was selected be
 
 Traffic rules set by iptables include a very basic approach to discouraging traffic on the machine. Opencanary has enabled a large volume of ports that seem promising to exploit. After an initial scan, the attacker would recognize these and begin to press on these attack surfaces. Unbeknownst to them, all traffic going to these ports will be dropped with no reason or message given to the attacker. Using DROP instead of REJECT provides the client no insight into why their connection is unsuccessful. On their side, it just appears that their request is hanging forever. This simple yet effective measure is a major piece of our defensive strategy. Opencanary’s large volume of unnecessary ports in tandem with these rules will cause major disruptions to any penetration attempts, guaranteeing a strong level of security for the system. 
 
-%-------------------------------------------------------------------------------
-\subsection{Evaluation Methodology \& Results}
-%-------------------------------------------------------------------------------
-\input{evalDefense}
+

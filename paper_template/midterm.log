@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.27)  30 MAY 2024 13:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.27)  30 MAY 2024 13:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -845,8 +845,8 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
  (./intro.tex)
-(./relatedwork) (./threatmodel) (./orchestration.tex (./evalOrchestration))
-(./frontend.tex [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+(./relatedwork) (./threatmodel) (./orchestration.tex) (./frontend.tex [1{/var/l
+ib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
@@ -860,7 +860,7 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 18.
-<sequenceD.png, id=68, 604.80956pt x 515.37544pt>
+<sequenceD.png, id=61, 604.80956pt x 515.37544pt>
 File: sequenceD.png Graphic file (type png)
 <use sequenceD.png>
 Package pdftex.def Info: sequenceD.png  used on input line 42.
@@ -870,12 +870,12 @@ Overfull \hbox (11.9246pt too wide) in paragraph at lines 42--43
  [][] 
  []
 
-(./evalFrontend)) (./services.tex
+) (./services.tex
 
 LaTeX Warning: Citation `' on page 2 undefined on input line 1.
 
-[2 <./sequenceD.png>] (./evalServices)) (./logging.tex (./evalLogging))
-(./defense.tex (./evalDefense)) (./midterm.bbl
+[2 <./sequenceD.png>]) (./logging.tex) (./defense.tex) (./evaluation)
+(./results) (./conclusion) (./midterm.bbl
 Underfull \hbox (badness 1960) in paragraph at lines 14--17
 []\T1/ptm/m/n/10 (+20) Past Weather.  Na-tional weather ser-vice.  \T1/ptm/m/it
 /10 (+20) URL:
@@ -886,13 +886,13 @@ Underfull \hbox (badness 1960) in paragraph at lines 14--17
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `midterm.out' has not changed.
-(rerunfilecheck)             Checksum: DEB399A3075E421CA0AAFE73C749A573;1902.
+(rerunfilecheck)             Checksum: 8266C63EB3CF025B75AE5426461926C5;1021.
  ) 
 Here is how much of TeX's memory you used:
- 24366 strings out of 480247
- 442681 string characters out of 5896151
- 1010350 words of memory out of 5000000
- 41641 multiletter control sequences out of 15000+600000
+ 24354 strings out of 480247
+ 442423 string characters out of 5896151
+ 1011109 words of memory out of 5000000
+ 41635 multiletter control sequences out of 15000+600000
  509676 words of font info for 179 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  100i,9n,104p,1004b,1444s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -901,10 +901,10 @@ e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on midterm.pdf (3 pages, 96903 bytes).
+Output written on midterm.pdf (3 pages, 96244 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
- 120 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
- 49274 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 129 PDF objects out of 1000 (max. 8388607)
+ 112 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 49258 words of extra memory for PDF output out of 51595 (max. 10000000)
 
