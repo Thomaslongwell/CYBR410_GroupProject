@@ -1,1 +1,26 @@
-this is the evaluation section
+To evaluate our services, we opted to focus on the usability of our platform and its services as well as its security. 
+Focusing on the usability aspect allows us to approach from a user-perspective. We are concerned with bugs, 
+ensuring products are running appropriately, and ensuring that the interface is not broken. While focusing 
+on security related aspects, we focus our efforts based on our threat model.
+
+For usability and service evaluation, we approached our deployment from the front end. Input fields were 
+tested for usability and for improper input. All links were tested on all page redundantly to ensure consistent 
+usability. All services were tested with proper and improper input.
+
+Security evaluatio of our deployment was done by engaging with our threat model to determine what knowledge 
+and tools are available to our adversaries. Knowing these key points allow us to accurately emulate the 
+types of enumeration and attacks we might see on our systems, allowing us to patch security vulnerabilties. 
+We evaluated our systems from all points that an aggressor will have access to, including the front end and 
+any services revealed via enumeration.
+
+We first enumerate the IP address the deployment is located at, as we know that the aggressors in our threat 
+model will likely initially approach the system via this method. After establishing that the machine is online 
+utilizing Internet Control Message Protocol \hyperref{https://datatracker.ietf.org/doc/html/rfc792}{(ICMP)} pings,
+we then enumerate services and ports using the network mapper \hyperref{https://nmap.org/}{Nmap}. After recording 
+the results of Nmap, we then perform enumeration with another CLI program, \hyperref{https://github.com/OJ/gobuster}{Gobuster}. 
+Gobuster will map out the directory structure of machine giving us insight into what attack vectors might be exposed
+to any aggressors. 
+
+With enumeration completed we know open ports, services offered, service versions, and directory structure, allowing 
+us to probe more deeply into individual components for vulnerabilities. This included probbing SSH for vulnerabilities 
+and attempting access to our SQL server.
