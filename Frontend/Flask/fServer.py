@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request, session, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy
 
 import logging
-import os
 import sys
 import subprocess
 import socket
@@ -13,9 +11,9 @@ app = Flask(__name__)
 
 logging.basicConfig(level=logging.DEBUG)  # Set the log level to DEBUG
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 
-db = SQLAlchemy(app)
+
+
 #--------------------------------------------API Methods------------------------------------
 
 cacheA={}
@@ -128,25 +126,9 @@ def index():
     return render_template('/index.html')
     #return ("this is running on port: "+str(port))
 
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/login')
 def login():
-    if request.method == 'POST':
-        username = request.form['name']
-        password = request.form['password']
-
-        # Query the database to find a user with the provided username
-        user = User.query.filter_by(name=username).first()
-
-        if user and user.check_password(password):
-            # Store user ID in session
-            session['user_id'] = user.id
-            return redirect(url_for('about'))
-        else:
-            # Render the login page again with an error message
-            error_message = 'Invalid username or password.'
-            return render_template('login.html', error=error_message)
-    else:
-        # Handle GET request
+   
         return render_template('login.html')
 
 @app.route('/about')
@@ -273,11 +255,6 @@ def internal_server_error(e):
 #---------------------SQL Stuff------------------------
 
 
-class User(db.Model):
-    __tablename__ = 'users'
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(80), unique=True, nullable=False)
-    password = db.Column(db.String(120), nullable=False)
 
 
 
