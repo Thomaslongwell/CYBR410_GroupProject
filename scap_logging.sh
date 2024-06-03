@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the directory where you want to save the .scap files
-CAPTURE_FOLDER="/home/miah/Desktop/scap"
+CAPTURE_FOLDER="./scaplogs"
 
 # Ensure the capture directory exists
 #mkdir -p "$scap"
