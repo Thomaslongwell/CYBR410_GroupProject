@@ -7,9 +7,9 @@ For usability and service evaluation, we approached our deployment from the fron
 tested for usability and for improper input. All links were tested on all page redundantly to ensure consistent 
 usability. All services were tested with proper and improper input.
 
-Security evaluatio of our deployment was done by engaging with our threat model to determine what knowledge 
+Security evaluation of our deployment was done by engaging with our threat model to determine what knowledge 
 and tools are available to our adversaries. Knowing these key points allow us to accurately emulate the 
-types of enumeration and attacks we might see on our systems, allowing us to patch security vulnerabilties. 
+types of enumeration and attacks we might see on our systems, allowing us to patch security vulnerabilities. 
 We evaluated our systems from all points that an aggressor will have access to, including the front end and 
 any services revealed via enumeration.
 
