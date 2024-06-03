@@ -1,5 +1,9 @@
 \begin{thebibliography}{1}
 
+\bibitem{CensusBureau_2023a}
+United~States Census~Bureau.
+\newblock Geocoding api, Aug 2023.
+
 \bibitem{rfc3912}
 Leslie Daigle.
 \newblock {WHOIS Protocol Specification}.
