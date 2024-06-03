@@ -13,4 +13,5 @@ it messages from being deleting.
 
 The ports that were revealed through an nmap scan also show that there is little security in protecting routing. This was observed as typing the port 
 number at the end of the url such as “/9000” would reveal a webpage that had a scramble of letters and characters. This vulnerability could be remedy 
-through proper routing controls so that url redirection attacks are minimized.
+through proper routing controls so that url redirection attacks are minimized. In addition to eliminating security threats, testing was implemented on 
+SSH for weak passwords. Passwords that were identified as weak were changed. 
