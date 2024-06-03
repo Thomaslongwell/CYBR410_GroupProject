@@ -2,8 +2,8 @@ version: '2'
 
 services:
   flask:
-    image: finalfe:v3
-   
+    image: finalfe:v2
+
     ports:
       - "9001:9001"  # Port Flask is running on
     restart: always
@@ -11,8 +11,7 @@ services:
   reverseproxy:
     image: fnginx:v1
     ports:
-      - 8080:8080 # Port NGINX is listening on 
+      - 8080:8080 # Port NGINX is listening on
 
 
     restart: always
-
