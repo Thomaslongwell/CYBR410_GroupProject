@@ -15,3 +15,6 @@ The ports that were revealed through an nmap scan also show that there is little
 number at the end of the url such as “:9000” would reveal a webpage that had a scramble of letters and characters. This vulnerability could be remedied 
 through proper routing controls so that url redirection attacks are minimized. In addition to eliminating security threats, testing was implemented on 
 SSH for weak passwords. Passwords that were identified as weak were changed.
+
+
+After testing our logging we found that former logs needed to be purged to make traffic from the expected attack clearer so we did so. After running the Nmap scan to generate traffic to test as referenced in the Evaluation section \ref{Evaluation} we found that our logs had produced multiple logs which when analyzed had traffic meaning logging was working as intended. 

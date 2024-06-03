@@ -24,3 +24,6 @@ to any aggressors.
 With enumeration completed we know open ports, services offered, service versions, and directory structure, allowing 
 us to probe more deeply into individual components for vulnerabilities. This included probing SSH for vulnerabilities 
 and attempting access to our SQL server.
+
+Our group also evaluated our logging by purging old logs that aren't necessary, as we wanted to clear the logs to clarify what traffic is produced by the expected attack referenced in the threat modeling section \ref{Threat Model}. Once the logs were purged our group ran a Nmap scan to generate traffic that would be captured using our logging. The Nmap scan used was \texttt{sudo nmap -T4 -A -sC 10.102.67.18}. 
+
