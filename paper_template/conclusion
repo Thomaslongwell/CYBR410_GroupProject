@@ -1,1 +1,7 @@
-conclusion section (Nick)
+This project provided us with a valuable opportunity to learn and apply various cybersecurity concepts in a real-world context. By working together to deploy a functional web server, we gained a deeper understanding of real-life deployments.
+
+Our evaluation process focused on both usability and security. From a usability perspective, we ensured that input fields and links were tested thoroughly for proper and improper inputs, guaranteeing a smooth user experience. For security evaluation, we engaged with our threat model to emulate potential attack scenarios, allowing us to identify and patch vulnerabilities.
+
+The threat model anticipated attacks such as port scanning, service enumeration, and brute-force attempts. Through tools like nmap and Gobuster, we were able to map open ports and services. This enabled us to understand the attack vectors and reinforce our defenses accordingly. The deployment successfully withstood these simulated attacks, confirming the robustness of our security measures.
+
+Overall, the project demonstrated our practical application of cybersecurity principles and highlighted areas for future improvement. It provided us with a deeper understanding of the challenges involved in real-world cybersecurity deployments, and prepared us to tackle similar challenges in our future professional careers.
