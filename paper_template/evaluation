@@ -22,5 +22,5 @@ Gobuster will map out the directory structure of machine giving us insight into 
 to any aggressors. 
 
 With enumeration completed we know open ports, services offered, service versions, and directory structure, allowing 
-us to probe more deeply into individual components for vulnerabilities. This included probbing SSH for vulnerabilities 
+us to probe more deeply into individual components for vulnerabilities. This included probing SSH for vulnerabilities 
 and attempting access to our SQL server.
