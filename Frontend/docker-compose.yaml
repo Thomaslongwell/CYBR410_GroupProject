@@ -1,17 +1,47 @@
-version: '2'
+version: '3.8'
 
 services:
-  flask:
-    image: flasky
-    ports:
-      - "9001:9001"  # Port Flask is running on
+  db:
+    image: mysql:latest
     restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'my-secret-pw'
+      MYSQL_DATABASE: 'mydatabase'
+      MYSQL_USER: 'myuser'
+      MYSQL_PASSWORD: 'mypassword'
+    ports:
+      - '9000:3306'
+    volumes:
+      - my-db:/var/lib/mysql
+    networks:
+      - app-network
+
+  flask:
+    image: finalfe:v2
+    ports:
+      - "9001:9001"  # running on
+    restart: always
+    environment:
+      - DATABASE_URL=mysql+pymysql://myuser:mypassword@db:3306/mydatabase
+    depends_on:
+      - db
+    networks:
+      - app-network
 
   reverseproxy:
-    image: fnginx
+    image: fnginx:v1
     ports:
-      - 8080:8080 # Port NGINX is listening on 
-
-
+      - 8080:8080 # listening to
     restart: always
+    depends_on:
+      - flask
+    networks:
+      - app-network
+
+volumes:
+  my-db:
+
+networks:
+  app-network:
+    driver: bridge
 

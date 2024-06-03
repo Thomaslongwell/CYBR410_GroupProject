@@ -1,6 +1,8 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session, redirect, url_for
+from flask_sqlalchemy import SQLAlchemy
 
 import logging
+import os
 import sys
 import subprocess
 import socket
@@ -11,18 +13,14 @@ app = Flask(__name__)
 
 logging.basicConfig(level=logging.DEBUG)  # Set the log level to DEBUG
 
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 
+db = SQLAlchemy(app)
+#--------------------------------------------API Methods------------------------------------
 
 cacheA={}
 cacheW={}
-'''
-#getIP helper method
-def getIP(incoming):
-    urlRequest = incoming
-    ipAddress= socket.gethostbyname(urlRequest)
 
-    return(ipAddress)
-'''
 
 def getIP(incoming):
     urlRequest = incoming.strip()  # Remove leading/trailing whitespace
@@ -39,10 +37,7 @@ def getAddress(incoming):
     #print(incoming)
     ipAddress= getIP(incoming)
     #print(ipAddress)
-    #street = ""  # Initialize with default value
-    #city = ""    # Initialize with default value
-    #state = ""   # Initialize with default value
-    #zipC = ""    # Initialize with default value
+ 
 
     #print(urlRequest)
     command="whois "
@@ -57,10 +52,7 @@ def getAddress(incoming):
             state=x[10:].strip()
         if x.startswith("Postal"):
             zipC=x[11:].strip()
-    #print(city)
-    #print(state)
-    #print(zipC)
-    #print(street)
+  
     address=[street, city, state, zipC];
 
 
@@ -127,69 +119,110 @@ def whois():
     s,o = subprocess.getstatusoutput("whois 8.8.8.8")
     return(o)
 
+
+#---------------------Routes------------------------
+
+
 @app.route('/')
 def index():
     return render_template('/index.html')
     #return ("this is running on port: "+str(port))
 
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['name']
+        password = request.form['password']
+
+        # Query the database to find a user with the provided username
+        user = User.query.filter_by(name=username).first()
+
+        if user and user.check_password(password):
+            # Store user ID in session
+            session['user_id'] = user.id
+            return redirect(url_for('about'))
+        else:
+            # Render the login page again with an error message
+            error_message = 'Invalid username or password.'
+            return render_template('login.html', error=error_message)
+    else:
+        # Handle GET request
+        return render_template('login.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 @app.route('/address')
 def address():
     return render_template('address_search.html')
-    '''
-@app.route("/address/<incomingHost>")
-def hostAddress(incomingHost):
 
-    ipAddress= getIP(incomingHost)
-
-    if(checkCache(cacheA,incomingHost)):
-        return (cacheA[incomingHost])
-    else:
-        addy = getAddress(ipAddress)
-        address=(addy[0]+" "+addy[1]+" "+addy[2]+" "+addy[3])
-
-        addCache(cacheA,incomingHost,address)
-
-        return (address)
-'''
 @app.route("/address", methods=['GET', 'POST'])
 def hostAddress():
-    if request.method == 'POST':
-        # Logic to handle form submission via POST request
-        incomingHost = request.form['url']
-    else:
-        # Logic to handle GET request
-        incomingHost = request.args.get('url', '')
+    try:
+        if request.method == 'POST':
+            # Logic to handle form submission via POST request
+            incomingHost = request.form['url']
+        else:
+            # Logic to handle GET request
+            incomingHost = request.args.get('url', '')
 
-    ipAddress = getIP(incomingHost)
+        ipAddress = getIP(incomingHost)
 
-    if checkCache(cacheA, incomingHost):
-        address = cacheA[incomingHost]
-    else:
-        addy = getAddress(incomingHost)
+        if checkCache(cacheA, incomingHost):
+            address = cacheA[incomingHost]
+        else:
+            addy = getAddress(incomingHost)
 
-        address=(addy[0]+" "+addy[1]+" "+addy[2]+" "+addy[3])
-        addCache(cacheA, incomingHost, address)
+            address=(addy[0]+" "+addy[1]+" "+addy[2]+" "+addy[3])
+            addCache(cacheA, incomingHost, address)
 
 
-    return render_template('address_output.html', url=incomingHost, address=address)
+        return render_template('address_output.html', url=incomingHost, address=address)
+
+    except AttributeError as e:
+        app.logger.error(f"AttributeError: {e}")
+        return redirect(url_for('page_not_found'))
+    except Exception as e:
+        app.logger.error(f"Unhandled exception: {e}")
+        return redirect(url_for('internal_server_error'))
+
+
+
 @app.route('/weather', methods=['GET'])
 def weather():
     return render_template('weather_search.html')
 
+
+@app.route("/weather", methods=['GET', 'POST'])
+def hostWeather():
+    try:
+        if request.method == 'POST':
+            # Logic to handle form submission via POST request
+            incomingHost = request.form['url']
+        else:
+            # Logic to handle GET request
+            incomingHost = request.args.get('url', '')
+
+        ipAddress = getIP(incomingHost)
+
+        if checkCache(cacheW, incomingHost):
+            weather = cacheW[incomingHost]
+        else:
+            weather = getWeather(ipAddress)
+            addCache(cacheW, incomingHost, weather)
+
+        return render_template('weather_output.html', url=incomingHost, weather=weather)
+
+    except AttributeError as e:
+        app.logger.error(f"AttributeError: {e}")
+        return redirect(url_for('page_not_found'))
+    except Exception as e:
+        app.logger.error(f"Unhandled exception: {e}")
+        return redirect(url_for('internal_server_error'))
+
+
+
 '''
-@app.route("/weather/<incomingHost>")
-def hostWeather(incomingHost):
-
-    ipAddress= getIP(incomingHost)
-
-    if(checkCache(cacheW,incomingHost)):
-        return (cacheW[incomingHost])
-    else:
-        weather=getWeather(incomingHost)
-
-        addCache(cacheW,incomingHost,weather)
-        return(weather)
-
 
 @app.route("/weather", methods=['GET', 'POST'])
 def hostWeather():
@@ -218,25 +251,40 @@ def hostWeather():
         return render_template('weather_search.html')
 
 '''
-@app.route("/weather", methods=['GET', 'POST'])
-def hostWeather():
-    if request.method == 'POST':
-        # Logic to handle form submission via POST request
-        incomingHost = request.form['url']
-    else:
-        # Logic to handle GET request
-        incomingHost = request.args.get('url', '')
 
-    ipAddress = getIP(incomingHost)
+#--------------------Error Handling----------------------------
 
-    if checkCache(cacheW, incomingHost):
-        weather = cacheW[incomingHost]
-    else:
-    	weather=getWeather(incomingHost)
-    	addCache(cacheW, incomingHost, weather)
+# Custom 404 error handler
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404_error.html'), 404
+
+# Custom 500 error handler
+@app.errorhandler(500)
+def internal_server_error(e):
+    return render_template('505_error.html'), 500
 
 
-    return render_template('weather_output.html', url=incomingHost, weather=weather)
+
+
+
+
+
+#---------------------SQL Stuff------------------------
+
+
+class User(db.Model):
+    __tablename__ = 'users'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(80), unique=True, nullable=False)
+    password = db.Column(db.String(120), nullable=False)
+
+
+
+
+
+#------------------End of Methods-----------------------
+
 if __name__ == '__main__':
 	#port=int(sys.argv[1])
 	#app.run(host="0.0.0.0", port=port)

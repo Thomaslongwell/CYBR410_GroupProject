@@ -12,9 +12,11 @@
 <body>
     <div id="container">
     <header>
-        <h1>Bartlebee</h1>
+        <h1>505</h1>
 
-        <p>We ship so <em>you</em> don't have to!</p>  
+        <h5>Internal Server Error</h5> 
+        <p>I <em>can't</em> believe you've done this!</p>   
+ 
 
 </form>
         </div>
@@ -25,22 +27,21 @@
 
         <nav>
             <ul>
-            <li><a href="/address">Address Lookup</a></li>
-            <li><a href="/weather">Weather Check</a></li>
-            <li><a href="/">Scheduling</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/login">Login</a></li>
+            <li>Address Lookup</li>
+            <li>Weather Check</li>
+            <li>Scheduling</li>
+            <li>About Us</li>
+            <li>Login</li>
             </ul>
         </nav>
-        <div id="sidebar" class="clearfix">
-            <div id="output">
-                <h1>Weather Information for {{ url }}:</h1>
-                <br>
-                <!-- Display weather information based on the URL -->
-                <h4>{{ weather }}</h4>
-            </div>
+        <div id="sidebar">
+            <form action="{{ url_for('index') }}" method="get">
+
+                <button type="submit" class="button">I'm so sorry, I'll never do this again</button>
+
+            </form>
         </div>
-    </div>
+ 
         
     <footer>
     &copy; 2024 Bartlebee inc.

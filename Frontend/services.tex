@@ -1,0 +1,52 @@
+	This web application incorporates two API's in the flask server. One service takes a URL and outputs the address of the registered owner based on the whois registry. The other uses that address and another weather API to output the weather of that given location. It also uses a list to cache the data of visited sites, to improve performance. To do all this, the API is broken up in to multiple methods, which ultimately called by the hostWeather and hostAddress methods when a form submission is made on the webpage.
+	
+	The first method that is used is getIP, which first strips the incoming URL of any whitespace and then uses the socket library's gethostbyname method to save the IP. this method is then used by both getWeather and getAddress in order to find the related information. getAddress uses the subprocess' getstatusoutput method to run the whois commandline tool to search for the registrar information based on the provided IP. It then splits the incoming tuble by a newline and parses out the different address fields, combines them and returns a whole address. 
+	
+	The getWeather method then passes that address in to a geocoding API to find the latitude and longitude of the address, which is required by the weather API that is used. The geocoding call returns a json file, that needs to be parsed and split between x and y coordinates correctly. The request's get method is then used to make an API call to weather.gov via the command line again. This outputs another json file that is then parsed to find the correct URL that contains the weather information. The get method is used once again on that forecast URL, which outputs the final json file, this is correctly parsed and returned as the weather for the given IP.
+	 
+% Include Python code snippet
+\begin{lstlisting}[style=mystyle, caption=getWeather method, label=lst:python]
+
+def getWeather(incoming):
+
+
+    ipAddress= getIP(incoming)
+   
+    addy = getAddress(ipAddress)
+
+    geocodingApi="https://geocoding.geo.census.gov/geocoder/locations/address?street="+addy[0]+"&city="+addy[1]+"&state="+addy[2]+"&zip="+addy[3]+"&benchmark=Public_AR_Current&format=json"
+    georesponse=requests.get(geocodingApi)
+    js = json.loads(georesponse.text)
+  
+    outputx=js['result']['addressMatches'][0]['coordinates']['x']
+    outputy=js['result']['addressMatches'][0]['coordinates']['y']
+    lat=format(outputy)
+    lon=format(outputx)
+   
+    
+    # base API string for weather.gov
+    weather_s = "https://api.weather.gov/points/"
+
+    # use the commandline input and the weather_s to make API call
+    response = requests.get(weather_s+lat+","+lon)
+
+    # convert it to json
+    js = json.loads(response.text)
+
+    # find the forecast URL based on the API page
+    forecast_URL = js['properties']['forecast']
+
+    # call the API again to get theforecast
+    final_response = requests.get(forecast_URL)
+
+    #parse json
+    js = json.loads(final_response.text)
+
+    #print the forecast
+    weather=(js['properties']['periods'][0]['detailedForecast'])
+
+    return(weather)
+\end{lstlisting}
+
+	The remaining methods handle the caching, either directly adding to it based on the correct list or traversing it to search for the given key which returns true or false. The host methods use this to first check the cache and then output the value based on the given key or add the key/value pair to the given cache if it isn't found. To summarize, this script creates a Flask web server that provides endpoints for IP address lookup and weather information retrieval, caching the results to improve performance. It also demonstrates how to integrate external APIs and system commands into a Flask application.
+

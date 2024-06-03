@@ -13,7 +13,7 @@ COPY /templates/address_output.html /templates
 COPY /templates/weather_output.html /templates
 COPY /templates/weather_search.html /templates
 COPY /static .
-COPY README .
+
 COPY fServer.py .
 EXPOSE 9001
 CMD ["python3", "fServer.py"]

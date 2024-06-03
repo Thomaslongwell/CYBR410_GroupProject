@@ -1,17 +1,31 @@
-ok heres the rub:
-we will build an image named "flasky" that copies front end files, exposes port 9001, and builds a flask server hosting our services.
+Just fyi - for the code snippets to work I added the listings package above the \begin{document} section: (copying the whole thing for ease of use)
 
-in /CYBR410_GroupProject/Frontend/Flask/ run the command
-docker build -t flasky .
 
-we will build a second image named "fningx" that deploys an nginx webserver on 8080, as well as configures the server to redirect to our flask deployment. 
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{usenix-2020-09}
 
-in /CYBR410_GroupProject/Frontend/nginx/ run the command  
-docker build -t fnginx .
+% to be able to draw some self-contained figs
+\usepackage{tikz}
+\usepackage{amsmath}
 
-we then run our docker compose file to put the two together.
+% inlined bib file
+\usepackage{filecontents}
 
-in /CYBR410_GroupProject/Frontend/ run the command
-sudo docker compose up
+% to include png figures
+\usepackage{graphicx}
 
-navigate to "localhost:8080". Viola, magnefique, chefs kiss... we did it.
+% Include the listings package and define code style
+\usepackage{listings}
+\lstdefinestyle{mystyle}{
+    language=Python,
+    basicstyle=\ttfamily,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green},
+    stringstyle=\color{red},
+    breaklines=true,
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny,
+    frame=single
+}
+
