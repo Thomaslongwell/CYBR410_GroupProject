@@ -16,5 +16,8 @@ number at the end of the url such as “:9000” would reveal a webpage that had
 through proper routing controls so that url redirection attacks are minimized. In addition to eliminating security threats, testing was implemented on 
 SSH for weak passwords. Passwords that were identified as weak were changed.
 
+The iptable rules proved relatively effective in minimizing what could be discovered on the server. While they are found to be open with an nmap scan, they do drop all traffic that attempts to connect to them. By adding this element to the server we provide more opportunity for distraction and make it significantly more difficult to find something of value to an attacker. 
 
-After testing our logging we found that former logs needed to be purged to make traffic from the expected attack clearer so we did so. After running the Nmap scan to generate traffic to test as referenced in the Evaluation section \ref{Evaluation} we found that our logs had produced multiple logs which when analyzed had traffic meaning logging was working as intended. 
+After testing our logging we found that former logs needed to be purged to make traffic from the expected attack clearer so we did so. After running the Nmap scan to generate traffic to test as referenced in the Evaluation section \ref{Evaluation} we found that our logs had produced multiple logs which when analyzed had traffic meaning logging was working as intended.
+
+
