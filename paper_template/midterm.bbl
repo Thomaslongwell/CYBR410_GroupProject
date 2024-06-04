@@ -1,5 +1,9 @@
 \begin{thebibliography}{1}
 
+\bibitem{wikiNginx_2024m}
+Multiple Authors.
+\newblock Wikipedia - nginx, May 2024.
+
 \bibitem{CensusBureau_2023a}
 United~States Census~Bureau.
 \newblock Geocoding api, Aug 2023.
@@ -8,6 +12,10 @@ United~States Census~Bureau.
 Leslie Daigle.
 \newblock {WHOIS Protocol Specification}.
 \newblock RFC 3912, September 2004.
+
+\bibitem{CloudFlare_2024j}
+Cloud Flare.
+\newblock What is a reverse proxy? | proxy servers explained, Jan 2024.
 
 \bibitem{grinberg2018flask}
 Miguel Grinberg.
