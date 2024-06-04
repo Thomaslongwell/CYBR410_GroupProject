@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: midterm.aux
 The style file: plain.bst
 Database file #1: refs.bib
-You've used 8 entries,
+You've used 9 entries,
             2118 wiz_defined-function locations,
-            542 strings with 4811 characters,
-and the built_in function-call counts, 1785 in all, are:
-= -- 159
-> -- 77
+            547 strings with 4894 characters,
+and the built_in function-call counts, 1984 in all, are:
+= -- 176
+> -- 84
 < -- 0
-+ -- 33
-- -- 24
-* -- 83
-:= -- 319
-add.period$ -- 21
-call.type$ -- 8
-change.case$ -- 35
++ -- 36
+- -- 26
+* -- 91
+:= -- 351
+add.period$ -- 23
+call.type$ -- 9
+change.case$ -- 39
 chr.to.int$ -- 0
-cite$ -- 8
-duplicate$ -- 70
-empty$ -- 162
-format.name$ -- 24
-if$ -- 367
+cite$ -- 9
+duplicate$ -- 77
+empty$ -- 184
+format.name$ -- 26
+if$ -- 410
 int.to.chr$ -- 0
-int.to.str$ -- 8
+int.to.str$ -- 9
 missing$ -- 5
-newline$ -- 40
-num.names$ -- 16
-pop$ -- 59
+newline$ -- 44
+num.names$ -- 18
+pop$ -- 68
 preamble$ -- 1
-purify$ -- 28
+purify$ -- 31
 quote$ -- 0
-skip$ -- 58
+skip$ -- 66
 stack$ -- 0
-substring$ -- 41
-swap$ -- 8
+substring$ -- 46
+swap$ -- 9
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 30
+type$ -- 34
 warning$ -- 0
-while$ -- 16
-width$ -- 9
-write$ -- 76
+while$ -- 18
+width$ -- 10
+write$ -- 84

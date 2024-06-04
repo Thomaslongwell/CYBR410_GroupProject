@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.18)  3 JUN 2024 18:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.18)  3 JUN 2024 19:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -866,7 +866,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-) [2] (./services.tex)
+ [2]) (./services.tex)
 (./logging.tex) (./defense.tex
 Underfull \hbox (badness 2221) in paragraph at lines 3--4
 \T1/ptm/m/n/10 (+20) are \T1/pcr/m/n/10 8444, 8881, 33061, 2201, 63791, 3391, 5
@@ -875,17 +875,17 @@ Underfull \hbox (badness 2221) in paragraph at lines 3--4
 
 [3]) (./evaluation) (./results) [4] (./conclusion) (./acknowledgements.tex)
 (./midterm.bbl
-Underfull \hbox (badness 5681) in paragraph at lines 26--30
+Underfull \hbox (badness 5681) in paragraph at lines 30--34
 []\T1/ptm/m/n/10 (+20) Marcin Nawrocki, Matthias Wäh-lisch, Thomas C
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--35
-[]\T1/ptm/m/n/10 (+20) thnkst.  Open-ca-nary.
+Underfull \hbox (badness 10000) in paragraph at lines 36--39
+[]\T1/ptm/m/n/10 (+20) thnkst.  Open-ca-nary repos-i-tory.
  []
 
 
-Underfull \hbox (badness 1960) in paragraph at lines 37--40
+Underfull \hbox (badness 1960) in paragraph at lines 41--44
 []\T1/ptm/m/n/10 (+20) Past Weather.  Na-tional weather ser-vice.  \T1/ptm/m/it
 /10 (+20) URL:
  []
@@ -895,10 +895,10 @@ Package rerunfilecheck Info: File `midterm.out' has not changed.
 (rerunfilecheck)             Checksum: E29C4D808C41A97AD22D535A884808A7;1146.
  ) 
 Here is how much of TeX's memory you used:
- 24131 strings out of 476025
- 443401 string characters out of 5790017
+ 24133 strings out of 476025
+ 443440 string characters out of 5790017
  1875388 words of memory out of 5000000
- 43938 multiletter control sequences out of 15000+600000
+ 43939 multiletter control sequences out of 15000+600000
  547382 words of font info for 182 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,9n,104p,1207b,448s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -906,10 +906,10 @@ Here is how much of TeX's memory you used:
 local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texl
 ive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/t
 exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on midterm.pdf (5 pages, 92377 bytes).
+Output written on midterm.pdf (5 pages, 92483 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 124 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
+ 142 PDF objects out of 1000 (max. 8388607)
+ 125 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
  41069 words of extra memory for PDF output out of 42996 (max. 10000000)
 

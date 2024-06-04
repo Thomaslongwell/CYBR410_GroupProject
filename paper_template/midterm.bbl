@@ -4,6 +4,10 @@
 Multiple Authors.
 \newblock Wikipedia - nginx, May 2024.
 
+\bibitem{OpenCanary_2024j}
+Thinkst Canary.
+\newblock Opencanary docs, June 2024.
+
 \bibitem{CensusBureau_2023a}
 United~States Census~Bureau.
 \newblock Geocoding api, Aug 2023.
@@ -30,7 +34,7 @@ Marcin Nawrocki, Matthias W{\"a}hlisch, Thomas~C Schmidt, Christian Keil, and
 
 \bibitem{opencanary}
 thnkst.
-\newblock Opencanary.
+\newblock Opencanary repository.
 \newblock {\em https://github.com/thinkst/opencanary}, 2024.
 
 \bibitem{weather2009national}
