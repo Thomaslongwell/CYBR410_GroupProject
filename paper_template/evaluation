@@ -1,29 +1,33 @@
-To evaluate our services, we opted to focus on the usability of our platform and its services as well as its security. 
-Focusing on the usability aspect allows us to approach from a user-perspective. We are concerned with bugs, 
-ensuring products are running appropriately, and ensuring that the interface is not broken. While focusing 
+To evaluate our services, we opted to focus on the usability of our platform and its services as well as its security.
+Focusing on the usability aspect allows us to approach from a user-perspective. We are concerned with bugs,
+ensuring products are running appropriately, and ensuring that the interface is not broken. While focusing
 on security related aspects, we focus our efforts based on our threat model.
 
-For usability and service evaluation, we approached our deployment from the front end. Input fields were 
-tested for usability and for improper input. All links were tested on all page redundantly to ensure consistent 
+For usability and service evaluation, we approached our deployment from the front end. Input fields were
+tested for usability and for improper input. All links were tested on all page redundantly to ensure consistent
 usability. All services were tested with proper and improper input.
 
-Security evaluation of our deployment was done by engaging with our threat model to determine what knowledge 
-and tools are available to our adversaries. Knowing these key points allow us to accurately emulate the 
-types of enumeration and attacks we might see on our systems, allowing us to patch security vulnerabilities. 
-We evaluated our systems from all points that an aggressor will have access to, including the front end and 
+Security evaluation of our deployment was done by engaging with our threat model to determine what knowledge
+and tools are available to our adversaries. Knowing these key points allow us to accurately emulate the
+types of enumeration and attacks we might see on our systems, allowing us to patch security vulnerabilities.
+We evaluated our systems from all points that an aggressor will have access to, including the front end and
 any services revealed via enumeration.
 
-We first enumerate the IP address the deployment is located at, as we know that the aggressors in our threat 
-model will likely initially approach the system via this method. After establishing that the machine is online 
+We first enumerate the IP address the deployment is located at, as we know that the aggressors in our threat
+model will likely initially approach the system via this method. After establishing that the machine is online
 utilizing Internet Control Message Protocol \hyperref{https://datatracker.ietf.org/doc/html/rfc792}{(ICMP)} pings,
-we then enumerate services and ports using the network mapper \hyperref{https://nmap.org/}{Nmap}. After recording 
-the results of Nmap, we then perform enumeration with another CLI program, \hyperref{https://github.com/OJ/gobuster}{Gobuster}. 
+we then enumerate services and ports using the network mapper \hyperref{https://nmap.org/}{Nmap}. After recording
+the results of Nmap, we then perform enumeration with another CLI program, \hyperref{https://github.com/OJ/gobuster}{Gobuster}.
 Gobuster will map out the directory structure of machine giving us insight into what attack vectors might be exposed
-to any aggressors. 
+to any aggressors.
 
-With enumeration completed we know open ports, services offered, service versions, and directory structure, allowing 
-us to probe more deeply into individual components for vulnerabilities. This included probing SSH for vulnerabilities 
+With enumeration completed we know open ports, services offered, service versions, and directory structure, allowing
+us to probe more deeply into individual components for vulnerabilities. This included probing SSH for vulnerabilities
 and attempting access to our SQL server.
 
-Our group also evaluated our logging by purging old logs that aren't necessary, as we wanted to clear the logs to clarify what traffic is produced by the expected attack referenced in the threat modeling section \ref{Threat Model}. Once the logs were purged our group ran a Nmap scan to generate traffic that would be captured using our logging. The Nmap scan used was \texttt{sudo nmap -T4 -A -sC 10.102.67.18}. 
+Investigation into some of the ports causes lots of confusion. Any non conventional port access is met with hanging requests when using curl or wget to access the web page. Further attempts to access these in a browser are met with the same results. While Nmap does show that those ports are open, it’s unable to detect exactly if there’s something blocking traffic. 
+
+Our group also evaluated our logging by purging old logs that aren't necessary, as we wanted to clear the logs to clarify what traffic is produced by the expected attack referenced in the threat modeling section \ref{Threat Model}. Once the logs were purged our group ran a Nmap scan to generate traffic that would be captured using our logging. The Nmap scan used was \texttt{sudo nmap -T4 -A -sC 10.102.67.18}.
+
+
 
