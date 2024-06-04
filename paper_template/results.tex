@@ -4,10 +4,10 @@ such as nmap, gobuster, or a ping sweep to map the hops of the system to checkin
 are not exclusively used by malicious actors but are used by admins to provide better Cybersecurity solutions which is what the researchers of this 
 study are applying.
 
-To reveal some detailed information about the network and that the web app is running on the first tool used is an nmap command on the Linux terminal 
+We utilize nmap, a command line tool to determine what ports and services are currently on offer on a system,   
 with the \verb|-sC| and \verb|-sV| flags which, respectively, will gather detailed information and the version that a service is operating on the network. In the 
 study, the services are revealed as well as what ports those services operate on. For example it can be observed that there is an OpenSSH service 
-operating on port 22 using tcp. A Defensive measure to protect this service would be to look at the \hyperref{https://cve.mitre.org/}{CVE} (Common 
+operating on port 22 using tcp. A Defensive measure to protect this service would be to look at the \hyperlink{https://cve.mitre.org/}{CVE} (Common 
 Vulnerabilities and Exposures) for OpenSSH. Looking at the CVE for OpenSSH, if the service is the most updated version, then admins might try to defend the encrypted 
 key protocol to prevent messages from being deleted.
 

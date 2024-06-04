@@ -1,12 +1,12 @@
 The orchestration for this deployment concerns itself with three key areas. The first area, services, 
 have been designed utilizing docker containers and docker compose for simple build up and tear down. 
-Our docker compose solution utilizes two docker images. The first container utilizes Docker's \href{https://nginx.org/en/}{NGINX}
+Our docker compose solution utilizes two docker images. The first container utilizes Docker's \hyperlink{https://nginx.org/en/}{NGINX}
 image. NGINX was chosen as our webserver for its portability and ease of configuration as a reverse proxy.
-Our second container runs a \hyperref{https://flask.palletsprojects.com/en/3.0.x/}{flask} server. 
+Our second container runs a \hyperlink{https://flask.palletsprojects.com/en/3.0.x/}{flask} server. 
 The flask server allows us to run web services locally, which are then accessed by NGINX to serve to clients.
 
-The second area, defense, utilizes \hyperref{https://opencanary.readthedocs.io/en/latest/}{OpenCanary} 
-and \hyperref{https://www.redhat.com/sysadmin/iptables}{iptables}. OpenCanary serves as a honeypot, a target 
+The second area, defense, utilizes \hyperlink{https://opencanary.readthedocs.io/en/latest/}{OpenCanary} 
+and \hyperlink{https://www.redhat.com/sysadmin/iptables}{iptables}. OpenCanary serves as a honeypot, a target 
 designed to waste the time and enumerate the techniques utilized by would-be aggressors. The command-line program, 
 iptables, is a series of rules and conditions used to control traffic control into and out of a machine. OpenCanary 
 is deployed as a docker container, though the complexity in building it warrants its own separate orchestration. To accomplish this, we utilize some basic bash scripting to automate the necessary commands to run OpenCanary with the configuration and 
