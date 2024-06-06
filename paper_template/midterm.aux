@@ -2,10 +2,13 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -27,23 +30,23 @@
 \newlabel{Threat Model}{{3}{2}{Threat Model}{section.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Orchestration}{2}{section.4}\protected@file@percent }
 \newlabel{Orchestration}{{4}{2}{Orchestration}{section.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Front end}{2}{section.5}\protected@file@percent }
-\newlabel{Front End}{{5}{2}{Front end}{section.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A diagram representing the orchestration of the deployment, with API endpoints (green), docker containers offering services (blue), and a honeypot (yellow).}}{2}{figure.1}\protected@file@percent }
+\newlabel{fig:enter-label}{{1}{2}{A diagram representing the orchestration of the deployment, with API endpoints (green), docker containers offering services (blue), and a honeypot (yellow)}{figure.1}{}}
 \citation{rfc3912}
 \citation{weather2009national}
 \citation{CensusBureau_2023a}
 \citation{weather2009national}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Front end}{3}{section.5}\protected@file@percent }
+\newlabel{Front End}{{5}{3}{Front end}{section.5}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6}Services}{3}{section.6}\protected@file@percent }
 \newlabel{Services}{{6}{3}{Services}{section.6}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {7}Logging}{3}{section.7}\protected@file@percent }
 \newlabel{Logging}{{7}{3}{Logging}{section.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Defense}{3}{section.8}\protected@file@percent }
-\newlabel{Defense}{{8}{3}{Defense}{section.8}{}}
 \citation{opencanary}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Defense}{4}{section.8}\protected@file@percent }
+\newlabel{Defense}{{8}{4}{Defense}{section.8}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {9}Evaluation}{4}{section.9}\protected@file@percent }
 \newlabel{Evaluation}{{9}{4}{Evaluation}{section.9}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {10}Results}{4}{section.10}\protected@file@percent }
-\newlabel{Results}{{10}{4}{Results}{section.10}{}}
 \bibstyle{plain}
 \bibdata{refs}
 \bibcite{august2019economics}{1}
@@ -54,10 +57,12 @@
 \bibcite{CloudFlare_2024j}{6}
 \bibcite{grinberg2018flask}{7}
 \bibcite{nawrocki2016survey}{8}
-\bibcite{opencanary}{9}
-\bibcite{weather2009national}{10}
+\@writefile{toc}{\contentsline {section}{\numberline {10}Results}{5}{section.10}\protected@file@percent }
+\newlabel{Results}{{10}{5}{Results}{section.10}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {11}Conclusion}{5}{section.11}\protected@file@percent }
 \newlabel{Conclusion}{{11}{5}{Conclusion}{section.11}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {12}Acknowledgements}{5}{section.12}\protected@file@percent }
 \newlabel{Acknowledgements}{{12}{5}{Acknowledgements}{section.12}{}}
-\gdef \@abspage@last{5}
+\bibcite{opencanary}{9}
+\bibcite{weather2009national}{10}
+\gdef \@abspage@last{6}

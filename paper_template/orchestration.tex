@@ -17,3 +17,12 @@ Our final area of focus is automation. By automating the setup of our deployment
 The use of docker containers and docker compose also allow our deployment to be mobile, only requiring 
 prospective users to install a small number of programs (i.e., docker, docker compose, git). We further simplify this 
 setup for users by automating the installation of these programs from within a bash script.
+
+The host server has 4 docker containers running on it. These are Flasky, Fnginx, SQL, and Opencanary. Fnginx acts a proxy for the Flasky container, which is what hosts everything and reaches out to the weather api endpoints. Opencanary doesn't directly interact with any of these functions, but remains functional as a separate container to distract attackers by having multiple open ports.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.8\linewidth]{Orch_Diagram.png}
+    \caption{A diagram representing the orchestration of the deployment, with API endpoints (green), docker containers offering services (blue), and a honeypot (yellow).}
+    \label{fig:enter-label}
+\end{figure}
